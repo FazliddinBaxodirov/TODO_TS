@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <title>Document</title>
+</head>
+<body class="bg-blue-400">
+    <form class="w-[550px] todo_form bg-white rounded-md mx-auto mt-[50px] p-5">
+        <h2 class="text-blue-500 font-semibold text-[45px] text-center my-[8px]">Todos</h2>
+        <div class="flex justify-between w-full">
+            <input type="text"  class="w-[75%] todo_input border-[2px] rounded-md p-[10px] outline-none text-blue-500 border-blue-400" placeholder="Typing...">
+            <button type="submit" class="w-[28%] bg-blue-400 rounded-md text-white font-normal text-[20px]">Submit</button>
+        </div>
+    </form>
+    <ul class="todo_list mx-auto w-[550px] mt-[25px] rounded-md space-y-[10px] p-5 bg-white ">
+
+    </ul>
+    <div id="wrapper" class="fixed modal_wrapper backdrop-blur-md inset-0 flex items-center justify-center scale-0 ">
+      <div class="bg-white w-[550px] modal_inner rounded-md p-5"></div>
+    </div>  
+    <script src="./main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</body>
+</html>
